@@ -1,4 +1,4 @@
 term.write("This is cool")
 sleep(1)
 
-http.get("")
+http.get("https://raw.githubusercontent.com/AgressiveFrog/p1nkOs/main/testing%20II?token=GHSAT0AAAAAACG4WASR3GARFHBZD6D3SMIUZHON6DQ")
