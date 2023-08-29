@@ -31,3 +31,12 @@ if pinkmailLookup then
 else 
     local connected = false
 end
+
+-- Search For Network
+-- Request Access
+-- Store ID
+-- Request User Information from Server
+-- Compare to user currently logged in
+-- Download if needed
+
+-- fszsxf
