@@ -1,0 +1,4 @@
+term.write("This is cool")
+sleep(1)
+
+http.get("")
