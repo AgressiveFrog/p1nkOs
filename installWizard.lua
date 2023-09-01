@@ -155,7 +155,7 @@ end
 local insOpt = 0
 
 while true do
- local e, p = "key" then
+ local e, p = "key"
  if e == "key" then
   local key = p
   if key == keys.y then
