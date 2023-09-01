@@ -26,12 +26,12 @@ local function colorfy(_textBackground, _textColor, _textContent)
   _oldBackground = term.getBackgroundColor()       -- Save
   _oldText = term.getTextColor()
   
-  term.setBackgroundColor(colors._textBackground)  -- Change
-  term.setTextColor(colors._textColor)
+  term.setBackgroundColor(_textBackground)  -- Change
+  term.setTextColor(_textColor)
   term.write(_textContent)
   
-  term.setBackgroundColor(colors._oldBackground)   --Revert
-  term.setTextColor(colors._oldText)
+  term.setBackgroundColor(_oldBackground)   --Revert
+  term.setTextColor(_oldText)
 end
 local function pos(_x, _y)
   term.setCursorPos(_x, _y)
@@ -45,7 +45,7 @@ term.write("Fetching Data ...")
   pos(30, 1)
   textutils.slowPrint("[ ########## ]", 24)  -- Half a seccond
 
-pos(1, 5)
+pos(1, 3)
 term.write("Compiling Drivers ...")
   pos(30, 3)
   textutils.slowPrint("[ ########## ]", 24)  -- Half a seccond
@@ -58,69 +58,69 @@ term.write("Opening Install Wizard ...")
 -- INSTALL WIZARD GUI
 
 pos(1, 1)  -- Banner
-colorfy("white", "black", "P1NK.OS INSTALL WIZARD                        ")
+colorfy("colors.white", "colors.black", "P1NK.OS INSTALL WIZARD                        ")
 pos(46, 1)  -- Exit button
-colorfy(red, "white", "[ X ]")
+colorfy(red, "colors.white", "[ X ]")
 
   -- HARDCODE LOGO
   pos(1,3)
-colorfy("black", "white", "....")  -- LN1
-colorfy ("blue", "white", "#########") 
-colorfy("black", "white", "....")
+colorfy("colors.black", "colors.white", "....")  -- LN1
+colorfy ("colors.blue", "colors.white", "#########") 
+colorfy("colors.black", "colors.white", "....")
   pos(1,4)
-colorfy("black", "white", "..")  -- LN2
-colorfy("blue", "white", "##")
-colorfy("purple", "white", "PP")
-colorfy("pink", "white", "IINNKKPP")
-colorfy("blue", "white", "##")
-colorfy("black", "white", "..")
+colorfy("colors.black", "colors.white", "..")  -- LN2
+colorfy("colors.blue", "colors.white", "##")
+colorfy("colors.purple", "colors.white", "PP")
+colorfy("colors.pink", "colors.white", "IINNKKPP")
+colorfy("colors.blue", "colors.white", "##")
+colorfy("colors.black", "colors.white", "..")
   pos(1,5)
-colorfy("blue", "white", "####")  -- LN3
-colorfy("purple", "white", "II")
-colorfy("pink", "white", "NN")
-colorfy("blue", "white", "##")
-colorfy("purple", "white", "KK")
-colorfy("pink", "white", "PP")
-colorfy("blue", "white", "####")
+colorfy("colors.blue", "colors.white", "####")  -- LN3
+colorfy("colors.purple", "colors.white", "II")
+colorfy("colors.pink", "colors.white", "NN")
+colorfy("colors.blue", "colors.white", "##")
+colorfy("colors.purple", "colors.white", "KK")
+colorfy("colors.pink", "colors.white", "PP")
+colorfy("colors.blue", "colors.white", "####")
   pos(1,6)
-colorfy("blue", "white", "####")  -- LN4
-colorfy("purple", "white", "II")
-colorfy("pink", "white", "NN")
-colorfy("blue", "white", "##")
-colorfy("purple", "white", "KK")
-colorfy("pink", "white", "PP")
-colorfy("blue", "white", "####")
+colorfy("colors.blue", "colors.white", "####")  -- LN4
+colorfy("colors.purple", "colors.white", "II")
+colorfy("colors.pink", "colors.white", "NN")
+colorfy("colors.blue", "colors.white", "##")
+colorfy("colors.purple", "colors.white", "KK")
+colorfy("colors.pink", "colors.white", "PP")
+colorfy("colors.blue", "colors.white", "####")
   pos(1,7)
-colorfy("blue", "white", "####")  -- LN5
-colorfy("purple", "white", "II")
-colorfy("pink", "white", "NN")
-colorfy("blue", "white", "##")
-colorfy("purple", "white", "KK")
-colorfy("pink", "white", "PP")
-colorfy("blue", "white", "####")
+colorfy("colors.blue", "colors.white", "####")  -- LN5
+colorfy("colors.purple", "colors.white", "II")
+colorfy("colors.pink", "colors.white", "NN")
+colorfy("colors.blue", "colors.white", "##")
+colorfy("colors.purple", "colors.white", "KK")
+colorfy("colors.pink", "colors.white", "PP")
+colorfy("colors.blue", "colors.white", "####")
   pos(1,8)
-colorfy("blue", "white", "####")  -- LN6
-colorfy("purple", "white", "II")
-colorfu("pink", "white", "NNKKPPII")
-colorfy("blue", "white", "####")
+colorfy("colors.blue", "colors.white", "####")  -- LN6
+colorfy("colors.purple", "colors.white", "II")
+colorfu("colors.pink", "colors.white", "NNKKPPII")
+colorfy("colors.blue", "colors.white", "####")
   pos(1,9)
-colorfy("black", "white", "########")  -- LN7
-colorfy("purple", "white", "NN")
-colorfy("pink", "white", "KK")
-colorfy("black", "white", "##########")
+colorfy("colors.black", "colors.white", "########")  -- LN7
+colorfy("colors.purple", "colors.white", "NN")
+colorfy("colors.pink", "colors.white", "KK")
+colorfy("colors.black", "colors.white", "##########")
   pos(1,10)
-colorfy("black", "white", "..")  -- LN8 
-colorfy("blue", "white", "##")
-colorfy("purple", "white", "PP")
-colorfy("pink", "white", "II")
-colorfy("blue", "white", "##########")
-colorfy("black", "white", "..")
+colorfy("colors.black", "colors.white", "..")  -- LN8 
+colorfy("colors.blue", "colors.white", "##")
+colorfy("colors.purple", "colors.white", "PP")
+colorfy("colors.pink", "colors.white", "II")
+colorfy("colors.blue", "colors.white", "##########")
+colorfy("colors.black", "colors.white", "..")
   pos(1,11)
-colorfy("black", "white", "....")  -- LN9
-colorfy("purple", "white", "NN")
-colorfy("pink", "white", "KK")
-colorfy("blue", "white", "#######")
-colorfy("black", "white", "..os")
+colorfy("colors.black", "colors.white", "....")  -- LN9
+colorfy("colors.purple", "colors.white", "NN")
+colorfy("colors.pink", "colors.white", "KK")
+colorfy("colors.blue", "colors.white", "#######")
+colorfy("colors.black", "colors.white", "..os")
   -- This should be a 18x9 logo, since each character is 1x2 in size
   -- That fixes the weird stretch, but I am to lazy to change the inside, so I'm keeping the double letters
 
