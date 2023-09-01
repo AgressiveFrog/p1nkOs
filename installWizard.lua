@@ -183,5 +183,5 @@ elseif insOpt == 1 then
  colorfy(1, 64, "                              ")
 
  downloadAll()
- shell.reboot
+ shell.reboot()
 end
