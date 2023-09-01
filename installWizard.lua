@@ -40,9 +40,6 @@ end
   -- Loading screen
   -- I know, i know; it's fake. But it gives me time to terminate the program in case of emergency
   -- And fake loading screens are more common than you think ...
-pos(h, 1)
-colorfy(1, 2, "Testing")
-
 pos(1, 1)
 term.write("Fetching Data ...")
   pos(30, 1)
@@ -57,6 +54,7 @@ pos(1, 5)
 term.write("Opening Install Wizard ...")
   pos(30, 5)
   textutils.slowPrint("[ ########## ]", 6)  -- Two secconds
+term.clear()
 
 -- INSTALL WIZARD GUI
 
@@ -104,26 +102,26 @@ colorfy(2048 , 1, "####")
   pos(1,8)
 colorfy(2048 , 1, "####")  -- LN6
 colorfy(4, 1, "II")
-colorfu(64, 1, "NNKKPPII")
+colorfy(64, 1, "NNKKPPII")
 colorfy(2048 , 1, "####")
   pos(1,9)
-colorfy(32768, 1, "########")  -- LN7
+colorfy(2048, 1, "####")  -- LN7
 colorfy(4, 1, "NN")
 colorfy(64, 1, "KK")
-colorfy(32768, 1, "##########")
+colorfy(2048, 1, "##########")
   pos(1,10)
 colorfy(32768, 1, "..")  -- LN8 
 colorfy(2048 , 1, "##")
 colorfy(4, 1, "PP")
 colorfy(64, 1, "II")
-colorfy(2048 , 1, "##########")
+colorfy(2048 , 1, "########")
 colorfy(32768, 1, "..")
   pos(1,11)
 colorfy(32768, 1, "....")  -- LN9
 colorfy(4, 1, "NN")
 colorfy(64, 1, "KK")
 colorfy(2048 , 1, "#######")
-colorfy(32768, 1, "..os")
+colorfy(32768, 1, ".os")
   -- This should be a 18x9 logo, since each character is 1x2 in size
   -- That fixes the weird stretch, but I am to lazy to change the inside, so I'm keeping the double letters
 
