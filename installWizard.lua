@@ -16,7 +16,7 @@ local pullEvent = pullEventRaw
 --local ID, Label = os.getID(), os.getLabel()
 local ver = 0.1 -- P1NK OS version
 local extra = "BETA" -- more info?
-local license = "public use" -- P1NK OS type
+local license = "PUBLIC USE" -- P1NK OS type
 
   -- Ease of use functions
 local function pull(_inf)  -- Temp varables should have a "_" in front of it to differentiate it from others
@@ -40,26 +40,26 @@ end
   -- Loading screen
   -- I know, i know; it's fake. But it gives me time to terminate the program in case of emergency
   -- And fake loading screens are more common than you think ...
-pos(1, 1)
+pos(1, 2)
 term.write("Fetching Data ...")
-  pos(30, 1)
+  pos(30, 2)
   textutils.slowPrint("[ ########## ]", 24)  -- Half a seccond
 
-pos(1, 3)
+pos(1, 4)
 term.write("Compiling Drivers ...")
-  pos(30, 3)
+  pos(30, 4)
   textutils.slowPrint("[ ########## ]", 24)  -- Half a seccond
 
-pos(1, 5)
+pos(1, 6)
 term.write("Opening Install Wizard ...")
-  pos(30, 5)
+  pos(30, 6)
   textutils.slowPrint("[ ########## ]", 6)  -- Two secconds
 term.clear()
 
 -- INSTALL WIZARD GUI
 
 pos(1, 1)  -- Banner
-colorfy(1, 32768, "P1NK.OS INSTALL WIZARD                        ")
+colorfy(1, 32768, "P1NK.OS INSTALL WIZARD                         ")
 pos(46, 1)  -- Exit button
 colorfy(16384, 1, "[ X ]")
 
@@ -141,3 +141,47 @@ term.write("DUCK29")
 pos(25, 11)
 term.write("FOR YOU!")
 
+ -- Bottom
+pos(1, h)
+term.write("Download P1NK.OS?   [ Y / N ]")
+
+-- Pathing and file management
+local function downloadAll()
+ term.clear()
+ term.write("This program is not yet done, and there is nothing more to do.")
+end
+
+ -- PROGRAMMING TIME
+local insOpt = 0
+
+while true do
+ local e, p = "key" then
+ if e == "key" then
+  local key = p
+  if key == keys.y then
+   insOpt = 1
+  elseif key == keys.n then
+   insOpt = -1
+  end
+ end
+end
+
+if insOpt == -1 then
+ term.clear()
+ term.terminate()
+elseif insOpt == 1 then
+ term.clear()
+ pos((w / 2) - 15, (h / 2) - 2)
+ colorfy(1, 64, "                              ")
+ pos((w / 2) - 15, (h / 2) - 1)
+ colorfy(1, 64, "  Downloading files ...       ")
+ pos((w / 2) - 15, (h / 2) + 0)
+ colorfy(1, 64, "  This Could Take A While...  ")
+ pos((w / 2) - 15, (h / 2) + 1)
+ colorfy(1, 64, "  Keep This Chunk Loaded      ")
+ pos((w / 2) - 15, (h / 2) + 2)
+ colorfy(1, 64, "                              ")
+
+ downloadAll()
+ shell.reboot
+end
