@@ -40,6 +40,9 @@ end
   -- Loading screen
   -- I know, i know; it's fake. But it gives me time to terminate the program in case of emergency
   -- And fake loading screens are more common than you think ...
+pos(h, 1)
+colorfy(1, 2, "Testing")
+
 pos(1, 1)
 term.write("Fetching Data ...")
   pos(30, 1)
@@ -60,7 +63,7 @@ term.write("Opening Install Wizard ...")
 pos(1, 1)  -- Banner
 colorfy(1, 32768, "P1NK.OS INSTALL WIZARD                        ")
 pos(46, 1)  -- Exit button
-colorfy(red, 1, "[ X ]")
+colorfy(16384, 1, "[ X ]")
 
   -- HARDCODE LOGO
   pos(1,3)
