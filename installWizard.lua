@@ -60,7 +60,7 @@ term.clear()
 
 pos(1, 1)  -- Banner
 colorfy(1, 32768, "P1NK.OS INSTALL WIZARD                         ")
-pos(46, 1)  -- Exit button
+pos(47, 1)  -- Exit button
 colorfy(16384, 1, "[ X ]")
 
   -- HARDCODE LOGO
