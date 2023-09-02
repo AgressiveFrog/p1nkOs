@@ -160,8 +160,10 @@ while true do
   local key = p
   if key == keys.y then
    insOpt = 1
+   break
   elseif key == keys.n then
    insOpt = -1
+   break
   end
  end
 end
