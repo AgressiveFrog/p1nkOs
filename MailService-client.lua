@@ -57,16 +57,24 @@ os.pullEvent = os.PullEventRaw
 
 -- Print primitive GUI
 -- Get info
+    -- Get User Info
+local var = fs.open("p1nkOs/Settings/UserInfo") -- Find a new name for var
+UserName = var.readLine()
+UserEmail = var.readLine
     -- User Email
     -- ID, label
-    -- Is Connected
-    -- Newest Mails
 -- Make connection
+local pinkMailLookup = rednet.lookup("PinkMail", "PinkMailService")
+if pinkMailLookup then
+    local connected = true
+    rednet.broadcast("Connected" .. UserEmail)
     -- Scan for server
     -- If found
         -- Send Info
         -- Update Status
 -- Update GUI in case of lag
+        -- Is Connected
+        -- Newest Mails
     -- Get Status
     -- Print User Stuff
     -- Print Menu
