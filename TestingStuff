@@ -1,0 +1,45 @@
+term.clear()
+local width, height = term.getSize()
+
+local function changeColor(_fg, _bg)
+    term.setTextColor(colors._fg)
+    term.setBackgroundColor(colors._bg)
+end
+
+local function pos(_x, _y)
+    term.setCursorPos(_x, _y)
+end
+
+local function drawMenu()
+    pos(2, 2)
+    changeColor(white, pink)
+    term.write("P1NK OS   ")
+
+    pos(2, 4)
+    changeColor(white, black)
+    term.write("----------")
+
+    pos(2, 6)
+    term.write("> Desktop ")
+
+    pos(2, 8)
+    term.write("> Mail    ")
+
+    pos(2, 9)
+    term.write("> Internet")
+
+    pos(2, 10)
+    term.write("> Programs")
+
+    pos(2, 11)
+    term.write("> Settings")
+
+    pos(2, 13)
+    term.write("----------")
+
+    pos(2, 15)
+    term.write("> Exit    ")
+
+end
+
+drawMenu()
